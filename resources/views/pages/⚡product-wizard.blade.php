@@ -91,8 +91,7 @@ new #[Title('Multi-Step Wizard Modal')] #[Layout('layouts::base')]class extends 
             x-cloak
             x-show="open"
             x-transition.opacity
-            class="fixed inset-0 z-50"
-        >
+            class="fixed inset-0 z-50">
 
             <!-- Backdrop -->
             <div class="fixed inset-0 bg-black/50"></div>

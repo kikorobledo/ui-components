@@ -9,14 +9,14 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 trait CreatedByTrait
 {
 
-    public function createdPor(){
+    public function createdBy(){
         return $this->belongsTo(User::class, 'created_by');
     }
 
-    protected function createdAt(): Attribute
+    protected function createdAtFormatted(): Attribute
     {
-        return Attribute::make(
-            get: fn (Carbon $value) => $value->format('d-m-Y'),
+       return Attribute::make(
+            get: fn ($value, $attributes) => Carbon::parse($attributes['created_at'])->format('d-m-Y H:i:s'),
         );
     }
 

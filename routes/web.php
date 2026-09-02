@@ -24,4 +24,4 @@ Route::livewire('notification-center', 'pages::notification-center')->name('noti
 
 Route::livewire('dynamic-search', 'pages::dynamic-search')->name('dynamic-search');
 
-Route::livewire('kanban-board', 'pages::kanban-board')->name('kanban-board');
+Route::livewire('kanban-board/{group}', 'pages::kanban-board')->name('kanban-board');

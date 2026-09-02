@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('phases', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('position')->default(0);
+            $table->string('name')->nullable();
+            $table->string('color')->default('blue');
+            $table->unsignedInteger('order')->default(0);
             $table->foreignId('group_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

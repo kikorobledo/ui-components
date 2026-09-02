@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use Database\Seeders\GroupSeeder;
 use Database\Seeders\MeetingSeeder;
 use Database\Seeders\NotificationSeeder;
 use Database\Seeders\PostSeeder;
@@ -36,7 +37,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call(NotificationSeeder::class);
 
-        $this->call(TaskSeeder::class);
+        /* $this->call(TaskSeeder::class); */
+
+        $this->call(GroupSeeder::class);
 
     }
 }

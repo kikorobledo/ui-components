@@ -47,7 +47,7 @@
                         {{ __('Dynamic search') }}
                     </flux:sidebar.item>
 
-                    <flux:sidebar.item icon="squares-plus" :href="route('kanban-board')" :current="request()->routeIs('kanban-board')" wire:navigate>
+                    <flux:sidebar.item icon="squares-plus" :href="route('kanban-board', '1')" :current="request()->routeIs('kanban-board')" wire:navigate>
                         {{ __('Kanban board') }}
                     </flux:sidebar.item>
 
@@ -81,7 +81,9 @@
         </flux:header>
 
         <flux:main>
+
             {{ $slot }}
+
         </flux:main>
 
         @persist('toast')
